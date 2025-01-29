@@ -21,32 +21,27 @@ public class LoginPage {
             Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        // Create the frame
         JFrame frame = new JFrame("HOME PAGE");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 400);
         frame.setLayout(null);
         frame.setResizable(false);
 
-        // Background color
         frame.getContentPane().setBackground(new Color(132, 206, 238));
 
         JLabel illustration = new JLabel();
         illustration.setBounds(0, 25, 250, 300);
-        ImageIcon originalIcon = new ImageIcon("C://Users//Julianne Guardiario//Downloads//LOGIN.png"); // Replace with actual image path
+        ImageIcon originalIcon = new ImageIcon("C://Users//Julianne Guardiario//Downloads//LOGIN.png"); // Replace if necessary
         Image scaledImage = originalIcon.getImage().getScaledInstance(600, 400, Image.SCALE_SMOOTH);
         illustration.setIcon(new ImageIcon(scaledImage));
         frame.add(illustration);
-        
 
-        // Panel for form
         JPanel formPanel = new JPanel();
         formPanel.setLayout(null);
         formPanel.setBounds(300, 50, 250, 280);
         formPanel.setBackground(new Color(112, 205, 204));
         frame.add(formPanel);
 
-        // Form title
         JLabel formTitle = new JLabel("Enter Information");
         formTitle.setFont(new Font("Arial", Font.BOLD, 16));
         formTitle.setBounds(60, 20, 150, 20);
@@ -57,7 +52,6 @@ public class LoginPage {
         adminNote.setBounds(90, 40, 100, 20);
         formPanel.add(adminNote);
 
-        // Full Name label and field
         JLabel fullNameLabel = new JLabel("Full Name");
         fullNameLabel.setBounds(20, 70, 80, 20);
         formPanel.add(fullNameLabel);
@@ -67,7 +61,6 @@ public class LoginPage {
         fullNameField.setBackground(new Color(112, 205, 204));
         formPanel.add(fullNameField);
 
-        // Password label and field
         JLabel passwordLabel = new JLabel("Password");
         passwordLabel.setBounds(20, 120, 80, 20);
         formPanel.add(passwordLabel);
@@ -77,21 +70,18 @@ public class LoginPage {
         passwordField.setBackground(new Color(112, 205, 204));
         formPanel.add(passwordField);
 
-        // Login Button
         JButton loginButton = new JButton("Login");
         loginButton.setBounds(50, 180, 160, 30);
         loginButton.setBackground(new Color(0, 200, 0));
         loginButton.setForeground(Color.WHITE);
         formPanel.add(loginButton);
 
-        // Guest Button
         JButton guestButton = new JButton("Continue as Guest");
         guestButton.setBounds(50, 215, 160, 30);
         guestButton.setBackground(new Color(100, 150, 255));
         guestButton.setForeground(Color.WHITE);
         formPanel.add(guestButton);
 
-        // Result Label
         JLabel resultLabel = new JLabel("");
         resultLabel.setBounds(20, 160, 200, 20);
         resultLabel.setForeground(Color.RED);
@@ -129,7 +119,6 @@ public class LoginPage {
             }
         });
 
-        // Show the frame
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
